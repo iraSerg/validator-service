@@ -21,7 +21,7 @@ public class OutboxRecordRepositoryCustomImpl implements OutboxRecordRepositoryC
 
     private final MongoTemplate mongoTemplate;
     private static final String CREATED = "createdAt";
-    private static final String EVENT_STATUS = "eventStatus";
+    private static final String EVENT_STATUS = "status";
     private static final String EVENT_ID = "_id";
 
     public List<OutboxEvent> selectForProcessing(Set<String> statuses, int batchSize) {
